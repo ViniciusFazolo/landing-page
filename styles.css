@@ -1,0 +1,298 @@
+/* geral */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow', sans-serif;
+    color: white;
+    text-decoration: none;
+}
+
+body {
+    background-color: black;
+}
+
+.header_container,
+.about_container,
+.home_container,
+.projects_container {
+    width: 80vw;
+    background-color: black;
+    margin: 0 auto;
+}
+
+h1::after {
+    content: "";
+    width: 2em;
+    height: 2px;
+    background-color: #07c05a;
+    display: block;
+    margin: 10px auto;
+}
+
+/* ---------------------------------------------- */
+
+/* header */
+.header_container {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+h2 a {
+    text-decoration: none;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 2rem;
+    font-size: 1rem;
+    padding: 5px;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        display: none;
+    }
+
+    .header_container {
+        display: block;
+        text-align: center;
+    }
+}
+
+/* ---------------------------------------------- */
+/* home */
+
+.home_container {
+    text-align: center;
+}
+
+.items {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hello span {
+    color: #07C05A;
+    font-size: 4em;
+}
+
+.resume {
+    margin: 1.5em 0;
+}
+
+.socials button {
+    background: transparent;
+    font-size: 1.4rem;
+    margin-top: 1em;
+    margin-right: 1em;
+    cursor: pointer;
+    border: 1px solid #fafafa;
+    border-radius: 10px;
+    transition: 0.5s;
+    width: 150px;
+}
+
+.socials button:hover {
+    background-color: #07C05A;
+}
+
+.socials button a {
+    display: flex;
+    align-items: center;
+    padding: 5px 20px;
+}
+
+.socials span {
+    margin-left: 10px;
+}
+
+.photo img {
+    width: 300px;
+    border-radius: 100%;
+}
+
+
+@media (max-width: 600px) {
+    .hello span {
+        font-size: 3em;
+    }
+
+    .socials {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .socials button {
+        margin: 0 0 .5em 0;
+    }
+}
+
+@media(max-width:400px) {
+    .hello span {
+        font-size: 1.5em;
+    }
+
+    .resume p {
+        font-size: 0.8rem;
+    }
+}
+
+/* ---------------------------------------------- */
+/* sobre */
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 5em 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+.text {
+    width: 50%;
+}
+
+.img img {
+    width: 300px;
+    border-radius: 100%;
+}
+
+@media (max-width: 800px) {
+    .about {
+        flex-direction: column;
+    }
+
+    .text {
+        text-align: justify;
+    }
+
+    .img img {
+        margin-top: 5em;
+        width: 150px;
+    }
+}
+
+/* ---------------------------------------------- */
+/* projetos */
+
+
+.projects {
+    margin: 5em 0;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+
+.card {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.25s ease;
+    cursor: pointer;
+}
+
+.card_img img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title h3 {
+    font-size: 18px;
+}
+
+.title span {
+    margin-left: 5px;
+}
+
+.title span i {
+    font-size: 1.5rem;
+}
+
+@media (max-width: 500px) {
+    .projects {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .card {
+        width: 200px;
+    }
+
+    .title {
+        flex-direction: column;
+    }
+
+    .title h3 {
+        margin-bottom: 0.5em;
+    }
+}
+
+@media (max-width: 250px) {
+    .projects {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .card {
+        width: 150px;
+    }
+}
+
+/* ---------------------------------------------- */
+/* footer */
+
+footer {
+    background-color: #07C05A;
+    width: 100%;
+    height: 3.5vh;
+    display: flex;
+    align-items: center;
+}
+
+footer p {
+    margin-left: .5em;
+    color: black;
+    font-size: 0.9rem;
+}
+
+
+@media (max-width:300px) {
+    footer p {
+        font-size: .7rem;
+    }
+}
