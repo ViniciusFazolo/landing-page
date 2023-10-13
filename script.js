@@ -24,6 +24,12 @@ const projetos = [
     link: "https://viniciusfazolo.github.io/todo-list/",
     tecnologies: [...tecnologias.react],
   },
+  {
+    name: 'FIlme com react',
+    path: 'img/apifilme2.jpg',
+    link: 'https://viniciusfazolo.github.io/outro-consumo-de-filme/',
+    tecnologies: [...tecnologias.react]
+  }
 ];
 
 const template = projetos
