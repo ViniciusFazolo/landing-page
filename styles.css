@@ -18,7 +18,7 @@ body {
 .home_container,
 .projects_container {
     width: 80vw;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     margin: 0 auto;
 }
 
@@ -35,8 +35,8 @@ h1::after {
 /* scroll top */
 .scroll-top{
     position: fixed;
-    bottom: 10px;
-    right: 10px;
+    bottom: 20px;
+    right: 40px;
     width: 2.5em;
     height: 2.5em;
     padding: 10px;
@@ -71,6 +71,10 @@ h2 a {
     text-decoration: none;
 }
 
+.navbar{
+    transition: right 0.3s;
+}
+
 .navbar ul {
     list-style: none;
     display: flex;
@@ -78,22 +82,71 @@ h2 a {
 
 .navbar ul li {
     margin-left: 2rem;
-    font-size: 1rem;
+    font-size: 20px;
     padding: 5px;
 }
 
+/* menu hamburguer */
+.menu_bars{
+    position: absolute;
+    right: 0;
+    display: none;
+    cursor: pointer;
+}
+
+/* x button */
+.close_navbar{
+    display: none;
+}
+
+/* black screen opacity */
+.screen_opacity{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    opacity: 0.5;
+    display: none;
+}
+
 @media (max-width: 950px) {
-    .navbar {
-        display: none;
+    .navbar{
+        position: fixed;
+        width: 300px;
+        right: -100%;
+        top: 0;
+        height: 100vh;
+        background-color: #07C05A;
+        z-index: 1;
     }
 
-    .header_container {
+    .close_navbar{
+        cursor: pointer;
+        position: absolute;
         display: block;
-        text-align: center;
+        top: 20px;
+        left: 20px;
+        padding: 5px;
     }
 
-    .navbar_mobile{
+    .navbar ul{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 4em;
+        gap: 2em;
+    }
+
+    .menu_bars{
         display: block;
+    }
+}
+
+@media (min-width: 950px){
+    .navbar ul li a:hover{
+        color: #07C05A;
     }
 }
 

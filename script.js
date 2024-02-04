@@ -60,7 +60,7 @@ const template = projetos
 
 projetosContainer.innerHTML = template;
 
-
+//--------------------------------------------
 // scroll top
 const scrollTop = document.querySelector('.scroll-top');
 
@@ -73,7 +73,34 @@ window.addEventListener('scroll', () => {
   }
 })
 
-scrollTop.addEventListener('click', () => {
-  
+scrollTop.addEventListener('click', () => { 
   window.scrollTo(0, 0)
+})
+
+//--------------------------------------------
+//navbar responsive
+function open_responsive_navbar(){
+  document.querySelector('.screen_opacity').style.display = 'block'
+  document.querySelector('.navbar').style.right = 0
+
+  const navbar_li = Array.from(document.querySelectorAll('.navbar ul li'))
+  navbar_li.map(item => item.onclick = close_responsive_navbar)
+}
+
+function close_responsive_navbar(){
+    document.querySelector('.screen_opacity').style.display = 'none'
+    document.querySelector('.navbar').style.right = '-100%'
+}
+
+//close black screen opacity if resize
+window.addEventListener('resize', () => {
+  const element = document.querySelector('.screen_opacity')
+  const elementDisplay = getComputedStyle(element).display
+
+  if(document.documentElement.clientWidth > 950 && elementDisplay === 'block'){
+    element.style.display = 'none'
+
+    //if there is resize, navbar close
+    document.querySelector('.navbar').style.right = '-100%'
+  }
 })
