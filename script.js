@@ -8,25 +8,25 @@ const tecnologias = {
 const projetos = [
   {
     name: "Api-Movie",
-    path: "img/apimovie.png",
+    path: "assets/img/apimovie.png",
     link: "https://viniciusfazolo.github.io/projeto_filmes/",
     tecnologies: [...tecnologias.htmlCssJs],
   },
   {
     name: "Calculadora",
-    path: "img/calculator.jpg",
+    path: "assets/img/calculator.jpg",
     link: "https://viniciusfazolo.github.io/calculator/",
     tecnologies: [...tecnologias.react],
   },
   {
     name: "TodoList",
-    path: "img/todo.png",
+    path: "assets/img/todo.png",
     link: "https://viniciusfazolo.github.io/todo-list/",
     tecnologies: [...tecnologias.react],
   },
   {
     name: 'FIlme com react',
-    path: 'img/apifilme2.jpg',
+    path: 'assets/img/apifilme2.jpg',
     link: 'https://viniciusfazolo.github.io/outro-consumo-de-filme/',
     tecnologies: [...tecnologias.react]
   }
@@ -59,3 +59,21 @@ const template = projetos
   .join("");
 
 projetosContainer.innerHTML = template;
+
+
+// scroll top
+const scrollTop = document.querySelector('.scroll-top');
+
+window.addEventListener('scroll', () => {
+  if(document.documentElement.scrollTop > 150){
+    scrollTop.classList.add('show-scroll-top')
+  }
+  else{
+    scrollTop.classList.remove('show-scroll-top')
+  }
+})
+
+scrollTop.addEventListener('click', () => {
+  
+  window.scrollTo(0, 0)
+})

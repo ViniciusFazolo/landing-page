@@ -32,6 +32,28 @@ h1::after {
 }
 
 /* ---------------------------------------------- */
+/* scroll top */
+.scroll-top{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 2.5em;
+    height: 2.5em;
+    padding: 10px;
+    background-color: #07C05A;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+.show-scroll-top{
+    display: block;
+}
+
+/* ---------------------------------------------- */
 /* header */
 
 .header_container {
