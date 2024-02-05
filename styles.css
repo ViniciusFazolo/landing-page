@@ -34,23 +34,29 @@ h1::after {
 /* ---------------------------------------------- */
 /* scroll top */
 .scroll-top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: fixed;
-    bottom: 20px;
+    bottom: 0;
     right: 40px;
-    width: 2.5em;
-    height: 2.5em;
+    width: 2.8em;
+    height: 2.8em;
     padding: 10px;
     background-color: #07C05A;
     color: white;
     border-radius: 50%;
-    text-align: center;
     border: none;
     cursor: pointer;
-    display: none;
+    opacity: 0; /* Inicialmente invisível */
+    visibility: hidden; /* Inicialmente invisível */
+    transition: opacity 0.3s, visibility 0.3s, bottom 0.3s ease-in-out; /* Adiciona transições */
 }
 
 .show-scroll-top{
-    display: block;
+    opacity: 1; /* Torna visível */
+    visibility: visible; /* Torna visível */
+    bottom: 20px; /* Move para a posição desejada */
 }
 
 /* ---------------------------------------------- */
